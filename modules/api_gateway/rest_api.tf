@@ -33,8 +33,6 @@ resource "aws_api_gateway_method_response" "rest_api_get_method_response_200"{
   resource_id = aws_api_gateway_resource.rest_api_resource.id
   http_method = aws_api_gateway_method.rest_api_get_method.http_method
   status_code = "200"
- 
-  
 }
 
 resource "aws_api_gateway_integration_response" "rest_api_get_method_integration_response_200" {
