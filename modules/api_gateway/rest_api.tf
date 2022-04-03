@@ -31,19 +31,6 @@ resource "aws_api_gateway_method_response" "rest_api_get_method_response_200" {
   status_code = "200"
 }
 
-resource "aws_api_gateway_integration_response" "rest_api_get_method_integration_response_200" {
-  rest_api_id = aws_api_gateway_rest_api.rest_api.id
-  resource_id = aws_api_gateway_resource.rest_api_resource.id
-  http_method = aws_api_gateway_integration.rest_api_get_method_integration.http_method
-  status_code = aws_api_gateway_method_response.rest_api_get_method_response_200.status_code
-  response_templates = {
-    "application/json" = jsonencode({
-      body = "Hello from the movies API!"
-    })
-  }
-}
-
-
 //  Creating a lambda resource based policy to allow API gateway to invoke the lambda function:
 resource "aws_lambda_permission" "api_gateway_lambda" {
   statement_id  = "AllowExecutionFromAPIGateway"
