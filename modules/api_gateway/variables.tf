@@ -23,3 +23,10 @@ variable "lambda_function_arn" {
   type        = string
   description = "The ARN of the Lambda function"
 } //value comes from main.tf
+
+
+variable "rest_api_stage_name" {
+  type        = string
+  description = "The name of the API Gateway stage"
+  default     = "prod" //add a stage name as per your requirement
+}
