@@ -19,13 +19,9 @@ resource "aws_api_gateway_integration" "rest_api_get_method_integration" {
   rest_api_id = aws_api_gateway_rest_api.rest_api.id
   resource_id = aws_api_gateway_resource.rest_api_resource.id
   http_method = aws_api_gateway_method.rest_api_get_method.http_method
-  type        = "MOCK"
-  //request_tempates is required to explicitly set the statusCode to an integer value of 200
-  request_templates = {
-    "application/json" = jsonencode({
-      statusCode = 200
-    })
-  }
+  integration_http_method = "POST"
+  type        = "AWS_PROXY"
+  uri         = var.lambda_function_arn
 }
 
 resource "aws_api_gateway_method_response" "rest_api_get_method_response_200" {
