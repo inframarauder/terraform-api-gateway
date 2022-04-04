@@ -2,6 +2,10 @@ module "lambda_function" {
   source = "./modules/lambda_function"
 }
 
+module "cognito" {
+  source = "./modules/cognito"
+}
+
 module "api_gateway" {
   source = "./modules/api_gateway"
   api_gateway_region = var.region
