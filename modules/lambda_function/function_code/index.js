@@ -18,7 +18,7 @@ exports.handler = async (event) => {
 		},
 		body: JSON.stringify({
 			movies,
-			username: decodedToken["congnito:username"],
+			username: decodedToken["cognito:username"],
 		}),
 	};
 };
