@@ -16,6 +16,9 @@ exports.handler = async (event) => {
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify({ movies, username: decodedToken.username }),
+		body: JSON.stringify({
+			movies,
+			username: decodedToken["congnito:username"],
+		}),
 	};
 };

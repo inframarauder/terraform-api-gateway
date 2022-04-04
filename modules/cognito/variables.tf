@@ -9,3 +9,4 @@ variable "user_pool_client_name" {
   description = "The name of the user pool client"
   default     = "terraform-api-gateway-demo-client"
 }
+
