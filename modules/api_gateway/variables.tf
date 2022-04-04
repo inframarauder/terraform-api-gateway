@@ -25,7 +25,7 @@ variable "lambda_function_arn" {
 } //value comes from main.tf
 
 variable "cognito_user_pool_arn" {
-  type = string
+  type        = string
   description = "The ARN of the user pool"
 } //value comes from main.tf
 
