@@ -1,3 +1,5 @@
+const jwtDecode = require("jwt-decode");
+
 const movies = [
 	"Schindlers List",
 	"Shawshank Redemption",
@@ -7,11 +9,13 @@ const movies = [
 ];
 
 exports.handler = async (event) => {
+	const decodedToken = jwtDecode(event.headers.Authorization);
+
 	return {
 		statusCode: 200,
 		headers: {
 			"Content-Type": "application/json",
 		},
-		body: JSON.stringify({ movies }), //sending the array of movies as stringified JSON in the response
+		body: JSON.stringify({ movies, username: decodedToken.username }),
 	};
 };
