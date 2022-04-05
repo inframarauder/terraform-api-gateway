@@ -41,8 +41,6 @@ variable "domain_name" {
   default     = "demo.hands-on-cloud.com"
 }
 
-
-
 variable "route53_hosted_zone_id"{
   type        = string
   description = "The hosted zone id of the route53 domain name"
