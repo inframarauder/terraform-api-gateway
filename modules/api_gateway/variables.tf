@@ -35,3 +35,16 @@ variable "rest_api_stage_name" {
   default     = "prod" //add a stage name as per your requirement
 }
 
+variable "domain_name" {
+  type        = string
+  description = "The domain name to associate with the API"
+  default     = "demo.hands-on-cloud.com"
+}
+
+
+
+variable "route53_hosted_zone_id"{
+  type        = string
+  description = "The hosted zone id of the route53 domain name"
+  default     = "Z0127006YL2SPHOIGZJS"
+}
