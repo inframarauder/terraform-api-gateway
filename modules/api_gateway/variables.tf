@@ -35,3 +35,14 @@ variable "rest_api_stage_name" {
   default     = "prod" //add a stage name as per your requirement
 }
 
+variable "root_domain" {
+  type        = string
+  description = "The domain name to associate with the API"
+  default     = "demo.hands-on-cloud.com"
+}
+
+variable "subdomain"{
+  type        = string
+  description = "The subdomain for the API"
+  default     = "api.demo.hands-on-cloud.com"
+}
