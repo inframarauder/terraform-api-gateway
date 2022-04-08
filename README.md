@@ -8,20 +8,20 @@ You must have Terraform configured on your system to run these scripts.Also, you
 
 To initialize the Terraform environment, run the following command:
 
-    `terraform init`
+    terraform init
 
 To validate the Terraform configuration, run the following command:
 
-    `terraform validate`
+    terraform validate
 
 To check the plan for the resources to be created, modified or destroyed, run the following command:
 
-    `terraform plan`
+    terraform plan
 
 To apply the plan, run the following command:
 
-    `terraform apply --auto-approve`
+    terraform apply --auto-approve
 
 To destroy the resources created, run the following command:
 
-    `terraform destroy --auto-approve`
+    terraform destroy --auto-approve
